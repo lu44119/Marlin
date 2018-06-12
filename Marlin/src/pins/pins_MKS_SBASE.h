@@ -54,9 +54,9 @@
 #define X_MIN_PIN          P1_24   // 10k pullup to 3.3V, 1K series
 #define X_MAX_PIN          P1_25   // 10k pullup to 3.3V, 1K series
 #define Y_MIN_PIN          P1_26   // 10k pullup to 3.3V, 1K series
-#define Y_MAX_PIN          P1_27   // 10k pullup to 3.3V, 1K series
+#define Y_MAX_PIN          P1_29   // 10k pullup to 3.3V, 1K series
 #define Z_MIN_PIN          P1_28   // The original Mks Sbase DIO19 has a 10k pullup to 3.3V or 5V, 1K series, so when using a Zprobe we must use DIO41 (J8 P1.22)
-#define Z_MAX_PIN          P1_29   // 10k pullup to 3.3V, 1K series
+#define Z_MAX_PIN          P1_27   // 10k pullup to 3.3V, 1K series
 
 //
 // Steppers
@@ -85,16 +85,18 @@
 // Temperature Sensors
 // 3.3V max when defined as an analog input
 //
-#define TEMP_BED_PIN        0   // A0 (TH1)
-#define TEMP_0_PIN          1   // A1 (TH2)
+
+#define TEMP_BED_PIN        1   // A0 (TH1)
+#define TEMP_0_PIN          0   // A1 (TH2)
 #define TEMP_1_PIN          2   // A2 (TH3)
 #define TEMP_2_PIN          3   // A3 (TH4)
 
 //
 // Heaters / Fans
 //
-#define HEATER_BED_PIN     P2_05
-#define HEATER_0_PIN       P2_07
+
+#define HEATER_BED_PIN     P2_07
+#define HEATER_0_PIN       P2_05
 #define HEATER_1_PIN       P2_06
 #ifndef FAN_PIN
   #define FAN_PIN          P2_04
