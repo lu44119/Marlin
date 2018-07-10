@@ -405,7 +405,7 @@
 // Default stepper release if idle. Set to 0 to deactivate.
 // Steppers will shut down DEFAULT_STEPPER_DEACTIVE_TIME seconds after the last move when DISABLE_INACTIVE_? is true.
 // Time can be set by M18 and M84.
-#define DEFAULT_STEPPER_DEACTIVE_TIME 60
+#define DEFAULT_STEPPER_DEACTIVE_TIME 120
 #define DISABLE_INACTIVE_X true
 #define DISABLE_INACTIVE_Y true
 #define DISABLE_INACTIVE_Z true  // set to false if the nozzle will fall down on your printed part when print has finished.
@@ -429,7 +429,7 @@
 #define DEFAULT_MINSEGMENTTIME        20000
 
 // If defined the movements slow down when the look ahead buffer is only half full
-#define SLOWDOWN
+//#define SLOWDOWN
 
 // Frequency limit
 // See nophead's blog for more info
@@ -486,7 +486,7 @@
 //#define DAC_MOTOR_CURRENT_DEFAULT { 70, 80, 90, 80 }    // Default drive percent - X, Y, Z, E axis
 
 // Use an I2C based DIGIPOT (e.g., Azteeg X3 Pro)
-#define DIGIPOT_I2C
+//#define DIGIPOT_I2C
 #if ENABLED(DIGIPOT_I2C) && !defined(DIGIPOT_I2C_ADDRESS_A)
   /**
    * Common slave addresses:
@@ -1533,7 +1533,7 @@
 /**
  * Spend 28 bytes of SRAM to optimize the GCode parser
  */
-#define FASTER_GCODE_PARSER
+//#define FASTER_GCODE_PARSER
 
 /**
  * User-defined menu items that execute custom GCode
@@ -1698,15 +1698,6 @@
 #if ENABLED(NANODLP_Z_SYNC)
   //#define NANODLP_ALL_AXIS  // Enables "Z_move_comp" output on any axis move.
                               // Default behaviour is limited to Z axis only.
-#endif
-
-/**
- * WiFi Support (Espressif ESP32 WiFi)
- */
-//#define WIFISUPPORT
-#if ENABLED(WIFISUPPORT)
-  #define WIFI_SSID "Wifi SSID"
-  #define WIFI_PWD  "Wifi Password"
 #endif
 
 #endif // CONFIGURATION_ADV_H
